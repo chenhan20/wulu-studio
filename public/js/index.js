@@ -1,3 +1,6 @@
-// $(document).ready (function(){
-//    $('.video1').play();
-// })
+// var app = new Vue({
+//     el: '.#app',
+//     data: {
+//       message: 'Hello Vue!'
+//     }
+//   })
