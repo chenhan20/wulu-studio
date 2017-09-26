@@ -8,8 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 //路由新增一個提供使用
-var steve = require('./routes/steve');
-var example = require('./routes/example');
+var wulu = require('./routes/wulu');
 
 var app = express();
 
@@ -31,8 +30,7 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use('/', index);
 app.use('/users', users);
 //路由新增
-app.use('/steve', steve);
-app.use('/example', example);
+app.use('/wulu', wulu);
 
 //POST
 // app.post('/steve/login_post', function(req, res) {
