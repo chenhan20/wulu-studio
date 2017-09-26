@@ -1,9 +1,23 @@
 extends ../common/layout
 
 block body
-  script(src="../js/index.js")
-  h1 五路皆神工作室
-
+  link(href="/stylesheets/index.css", rel="stylesheet")
+  .container-fluid.video_container
+  video(loop='', muted='',autoplay='')
+    source(src='https://lolstatic-a.akamaihd.net/frontpage/apps/prod/playnow-global/en_GB/38d98194ca4c5b6d4c1933edd74eec2ee3b53438/assets/vid/hero-video.mp4', type='video/mp4')
+  .overlay-desc
+    h1 🔥五路皆神工作室概念網站🔥
+        |
   
+  containe-fluid
+    #app
+     | {{ message }}
+
+
+  script(src="/vue/dist/vue.js")
+  script(src="../js/index.js")
+  
+
+
   
 
