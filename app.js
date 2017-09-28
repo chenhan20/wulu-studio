@@ -12,6 +12,8 @@ var wulu = require('./routes/wulu');
 
 var app = express();
 
+const port = process.env.PORT || 3000;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -61,5 +63,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+listen();
+
+function listen () {
+	app.listen(port);
+	console.log('Express started on port ' + port)
+}
 
 module.exports = app;
