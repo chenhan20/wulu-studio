@@ -1,0 +1,23 @@
+{
+  "name": "wulu-studio",
+  "description": "pkgs",
+  "main": "",
+  "authors": [
+    "steve_chuang",
+    "ghostlwj"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/chenhan20/wulu-studio",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "vue": "^2.4.4"
+  }
+}
