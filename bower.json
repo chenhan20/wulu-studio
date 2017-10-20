@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "bootstrap": "v4.0.0-alpha.6",
-    "vue": "^2.4.4"
+    "vue": "^2.4.4",
+    "fullpage.js": "^2.9.4"
   }
 }
