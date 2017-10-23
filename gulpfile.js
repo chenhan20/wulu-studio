@@ -8,4 +8,5 @@ fs.readdirSync(tasks)
 	.filter(task => ~task.search(/^[^\.].*\.js$/))
 	.forEach(task => require(join(tasks, task)));
 
-gulp.task('dev', ['dev:server']);
+gulp.task('dev', ['dev:server', 'sass:watch']);
+gulp.task('dev:compile', ['sass', 'dev']);
