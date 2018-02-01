@@ -123,6 +123,11 @@ The default test script will do the following: lint with ESLint -> type check wi
 
   - **`shared`**: contains utilities shared across the entire codebase.
 
+  - **`types`**: contains TypeScript type definitions
+
+    - **`test`**: type definitions tests
+
+
 ## Financial Contribution
 
 As a pure community-driven project without major corporate backing, we also welcome financial contributions via Patreon or OpenCollective.
@@ -138,4 +143,4 @@ Funds donated via Patreon goes directly to support Evan You's full-time work on 
 
 Thank you to all the people who have already contributed to vuejs!
 
-<a href="graphs/contributors"><img src="https://opencollective.com/vuejs/contributors.svg?width=890" /></a>
+<a href="https://github.com/vuejs/vue/graphs/contributors"><img src="https://opencollective.com/vuejs/contributors.svg?width=890" /></a>

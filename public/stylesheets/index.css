@@ -15,7 +15,7 @@ video{
     align-items: center;
     justify-content: center;
 }
-h1 {
+.mediafont {
     margin:20%;
     color: white;
     font-family: 'Nobile', sans-serif;
@@ -28,6 +28,12 @@ h1 {
     width:70%;
     /* margin:0px auto;    */
 }
-/* body{
-    padding:0px;
-} */
+.row_1{
+    height: 10vh;
+}
+.row_2{
+    height: 20vh;
+}
+body{
+    overflow-x: hidden;
+}

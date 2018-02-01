@@ -6,12 +6,21 @@ block body
   video(loop='', muted='',autoplay='')
     source(src='https://lolstatic-a.akamaihd.net/frontpage/apps/prod/playnow-global/en_GB/38d98194ca4c5b6d4c1933edd74eec2ee3b53438/assets/vid/hero-video.mp4', type='video/mp4')
   .overlay-desc
-    h1 🔥五路皆神工作室概念網站🔥
+    h1.mediafont 🔥五路皆神工作室概念網站🔥
         |steve_branch_01
   
-  containe-fluid
-    #app
-     | {{ message }}
+  .containe-fluid
+    .row.row_1
+    .row.row_2
+      .col-md-4
+        #app 
+          p {{ message }}
+          input(v-model='message')
+      .col-md-4
+        h1 123
+      .col-md-4
+        h1 456
+    
 
 
   script(src="/vue/dist/vue.js")
