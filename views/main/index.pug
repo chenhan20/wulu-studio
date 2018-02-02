@@ -12,14 +12,44 @@ block body
   .containe-fluid
     .row.row_1
     .row.row_2
-      .col-md-4
-        #app 
+      .col-md-4.row1_column_1
+        #app_1 
           p {{ message }}
           input(v-model='message')
+        #app_2
+          input#jack(type='checkbox', value='Jack', v-model='checkedNames')
+          label(for='jack') Jack 
+          input#Fuck(type='checkbox', value='Fuck', v-model='checkedNames')
+          label(for='Fuck') Fuck 
+          input#Fuck(type='checkbox', value='Dick', v-model='checkedNames')
+          label(for='Dick') Dick 
+          br
+          span Checked names: {{checkedNames}}
       .col-md-4
-        h1 123
+        h1 價格試算
+        select.custom-select
+          option(selected='') 目前牌位
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+        select.custom-select
+          option(selected='') 分數
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+        br
+        select.custom-select
+          option(selected='') 目標牌位
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+        select.custom-select
+          option(selected='') 分數
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
       .col-md-4
-        h1 456
+        h1 結果
     
 
 

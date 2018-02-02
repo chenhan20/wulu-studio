@@ -31,9 +31,18 @@ video{
 .row_1{
     height: 10vh;
 }
-.row_2{
-    height: 20vh;
+.row1_column_1{
+    padding: 40px;
 }
+.row_2{
+    height: 100vh;
+}
+.custom-select{
+    width:120px;
+    margin:10px;
+}
+
+
 body{
     overflow-x: hidden;
 }
