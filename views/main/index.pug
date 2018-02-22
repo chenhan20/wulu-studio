@@ -8,23 +8,8 @@ block body
   .overlay-desc
     h1.mediafont 🔥五路皆神工作室概念網站🔥
         |steve_branch_01
-  
   .containe-fluid
-    .row.row_1
     .row.row_2
-      .col-md-4.row1_column_1
-        #app_1 
-          p {{ message }}
-          input(v-model='message')
-        #app_2
-          input#jack(type='checkbox', value='Jack', v-model='checkedNames')
-          label(for='jack') Jack 
-          input#Fuck(type='checkbox', value='Fuck', v-model='checkedNames')
-          label(for='Fuck') Fuck 
-          input#Fuck(type='checkbox', value='Dick', v-model='checkedNames')
-          label(for='Dick') Dick 
-          br
-          span Checked names: {{checkedNames}}
       .col-md-5
         h1.font PRICE
         #app_3
@@ -71,8 +56,8 @@ block body
             h3.sapn.span_2.font 分數輸入有誤
           .col-md-7(v-else-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0')
             h3.sapn.span_2.font 價格為:{{TotalPrice()}}元
-      .col-md-3
-        h1.font 結果
+      .col-md-5
+        h1.font 
     
 
 

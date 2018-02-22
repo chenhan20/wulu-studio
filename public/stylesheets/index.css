@@ -26,7 +26,6 @@ video{
 .font{
     color: white;
     font-family: 'Orbitron';
-    text-align: center;
     font-weight:1000;
   }
 
@@ -34,12 +33,7 @@ video{
     width:70%;
     /* margin:0px auto;    */
 }
-.row_1{
-    height: 10vh;
-}
-.row1_column_1{
-    padding: 40px;
-}
+
 .row_2{
     height: 100vh;
 }
