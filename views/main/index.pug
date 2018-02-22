@@ -25,31 +25,54 @@ block body
           label(for='Dick') Dick 
           br
           span Checked names: {{checkedNames}}
-      .col-md-4
-        h1 價格試算
-        select.custom-select
-          option(selected='') 目前牌位
-          option(value='1') One
-          option(value='2') Two
-          option(value='3') Three
-        select.custom-select
-          option(selected='') 分數
-          option(value='1') One
-          option(value='2') Two
-          option(value='3') Three
-        br
-        select.custom-select
-          option(selected='') 目標牌位
-          option(value='1') One
-          option(value='2') Two
-          option(value='3') Three
-        select.custom-select
-          option(selected='') 分數
-          option(value='1') One
-          option(value='2') Two
-          option(value='3') Three
-      .col-md-4
-        h1 結果
+      .col-md-5
+        h1.font PRICE
+        #app_3
+          form.form-inline
+            select.form-control.custom-select(v-model='original_league')
+              option(value='銅牌') 銅牌
+              option(value='銀牌') 銀牌
+              option(value='金牌') 金牌
+              option(value='白金') 白金
+              option(value='鑽石') 鑽石
+              option(value='大師') 大師
+              option(value='菁英') 菁英
+            select.form-control.custom-select(v-model='original_area')
+              option(value='一區(I)') 一區(I)
+              option(value='二區(II)') 二區(II)
+              option(value='三區(III)') 三區(III)
+              option(value='四區(IV)') 四區(IV)
+              option(value='五區(V)') 五區(V)
+            input.col-md-2.form-control.OG_input(v-model='original_point',placeholder='')
+          form.form-inline
+            select.form-control.custom-select(v-model='target_league')
+              option(value='銅牌') 銅牌
+              option(value='銀牌') 銀牌
+              option(value='金牌') 金牌
+              option(value='白金') 白金
+              option(value='鑽石') 鑽石
+              option(value='大師') 大師
+              option(value='菁英') 菁英
+            select.form-control.custom-select(v-model='target_area')
+              option(value='一區(I)') 一區(I)
+              option(value='二區(II)') 二區(II)
+              option(value='三區(III)') 三區(III)
+              option(value='四區(IV)') 四區(IV)
+              option(value='五區(V)') 五區(V)
+            input.col-md-2.form-control.TG_input(v-model='target_point',placeholder='')
+          .col-md-12
+            small.font 20分為一勝差，若小於則以一勝差計算
+          .col-md-12
+            span.span_1.font 從: {{original_league}}{{original_area}}  
+            span.span_1.font(v-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0') {{original_point}} 分
+            span.span_1.font 打到  {{target_league}} {{target_area}}
+            span.span_1.font(v-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0') {{target_point}} 分
+          .col-md-7(v-if='original_point>100||original_point<0||target_point>100||target_point<0')
+            h3.sapn.span_2.font 分數輸入有誤
+          .col-md-7(v-else-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0')
+            h3.sapn.span_2.font 價格為:{{TotalPrice()}}元
+      .col-md-3
+        h1.font 結果
     
 
 

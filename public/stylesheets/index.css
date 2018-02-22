@@ -23,6 +23,12 @@ video{
     text-align: center;
     font-weight: bold;
   }
+.font{
+    color: white;
+    font-family: 'Orbitron';
+    text-align: center;
+    font-weight:1000;
+  }
 
 .loginalert{
     width:70%;
@@ -41,7 +47,16 @@ video{
     width:120px;
     margin:10px;
 }
+.OG_input{
+    font-family: 'Orbitron';
+}
+.TG_input{
+    font-family: 'Orbitron';
+}
 
+.containe-fluid{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
 
 body{
     overflow-x: hidden;
