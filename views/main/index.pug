@@ -9,10 +9,16 @@ block body
     h1.mediafont 🔥五路皆神工作室概念網站🔥
         |steve_branch_01
   .containe-fluid
-    .row.row_2
-      .col-md-5
-        h1.font PRICE
-        #app_3
+    #price
+      .row
+        .col-sm-4
+          h1.font_title SELECT
+        .col-sm-5
+          h1.font_title IMAGE
+        .col-sm-3
+          h1.font_title PRICE
+      .row.row_2
+        .col-md-4
           form.form-inline
             select.form-control.custom-select(v-model='original_league')
               option(value='銅牌') 銅牌
@@ -22,12 +28,12 @@ block body
               option(value='鑽石') 鑽石
               option(value='大師') 大師
               option(value='菁英') 菁英
-            select.form-control.custom-select(v-model='original_area')
-              option(value='一區(I)') 一區(I)
-              option(value='二區(II)') 二區(II)
-              option(value='三區(III)') 三區(III)
-              option(value='四區(IV)') 四區(IV)
-              option(value='五區(V)') 五區(V)
+            select.form-control.custom-select(v-model='original_area',v-if="original_league!=='大師'&&original_league!=='菁英'")
+              option(value='一(I)') 一(I)
+              option(value='二(II)') 二(II)
+              option(value='三(III)') 三(III)
+              option(value='四(IV)') 四(IV)
+              option(value='五(V)') 五(V)
             input.col-md-2.form-control.OG_input(v-model='original_point',placeholder='')
           form.form-inline
             select.form-control.custom-select(v-model='target_league')
@@ -38,26 +44,69 @@ block body
               option(value='鑽石') 鑽石
               option(value='大師') 大師
               option(value='菁英') 菁英
-            select.form-control.custom-select(v-model='target_area')
-              option(value='一區(I)') 一區(I)
-              option(value='二區(II)') 二區(II)
-              option(value='三區(III)') 三區(III)
-              option(value='四區(IV)') 四區(IV)
-              option(value='五區(V)') 五區(V)
+            select.form-control.custom-select(v-model='target_area',v-if="target_league!=='大師'&&target_league!=='菁英'")
+              option(value='一(I)') 一(I)
+              option(value='二(II)') 二(II)
+              option(value='三(III)') 三(III)
+              option(value='四(IV)') 四(IV)
+              option(value='五(V)') 五(V)
             input.col-md-2.form-control.TG_input(v-model='target_point',placeholder='')
           .col-md-12
             small.font 20分為一勝差，若小於則以一勝差計算
           .col-md-12
-            span.span_1.font 從: {{original_league}}{{original_area}}  
-            span.span_1.font(v-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0') {{original_point}} 分
-            span.span_1.font 打到  {{target_league}} {{target_area}}
-            span.span_1.font(v-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0') {{target_point}} 分
-          .col-md-7(v-if='original_point>100||original_point<0||target_point>100||target_point<0')
-            h3.sapn.span_2.font 分數輸入有誤
-          .col-md-7(v-else-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0')
-            h3.sapn.span_2.font 價格為:{{TotalPrice()}}元
-      .col-md-5
-        h1.font 
+            h4.span.span_1.font 從  {{original_league}}
+              span.span_1.font(v-if="original_league!=='大師'&&original_league!=='菁英'") {{original_area}}  區
+              span.span_1.font(v-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0') {{original_point}} 分
+            h4.span.span_1.font 打到 {{target_league}} 
+              span.span_1.font(v-if="target_league!=='大師'&&target_league!=='菁英'") {{target_area}} 區
+              span.span_1.font(v-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0') {{target_point}} 分
+        .col-md-2
+          .original_image
+            span.span_image(v-if='original_changImage()==1')
+              img(src='/image/Bronze.jpg')
+            span.span_image(v-if='original_changImage()==2')
+              img(src='/image/Silver.jpg')
+            span.span_image(v-if='original_changImage()==3')
+              img(src='/image/Gold.jpg')
+            span.span_image(v-if='original_changImage()==4')
+              img(src='/image/Platinum.jpg')
+            span.span_image(v-if='original_changImage()==5')
+              img(src='/image/Diamond.jpg')
+            span.span_image(v-if='original_changImage()==6')
+              img(src='/image/Master.jpg')
+            span.span_image(v-if='original_changImage()==7')
+              img(src='/image/Challenger.jpg')
+            h2.font {{original_area}}
+              span.span_1.font(v-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0') {{original_point}} 分
+        h1.font_arrow.col-md-1 →
+        .col-md-2
+          .target_image
+            span.span_image(v-if='target_changImage()==1')
+              img(src='/image/Bronze.jpg')
+            span.span_image(v-if='target_changImage()==2')
+              img(src='/image/Silver.jpg')
+            span.span_image(v-if='target_changImage()==3')
+              img(src='/image/Gold.jpg')
+            span.span_image(v-if='target_changImage()==4')
+              img(src='/image/Platinum.jpg')
+            span.span_image(v-if='target_changImage()==5')
+              img(src='/image/Diamond.jpg')
+            span.span_image(v-if='target_changImage()==6')
+              img(src='/image/Master.jpg')
+            span.span_image(v-if='target_changImage()==7')
+              img(src='/image/Challenger.jpg')
+            h2.font {{target_area}}
+              span.span_1.font(v-if='original_point<=100&&original_point>=0&&target_point<=100&&target_point>=0') {{target_point}} 分
+        .col-md-3
+          .col-md(v-if="Fn_point()==='pointFail'")
+            h3.sapn.span_2.font_price 分數輸入有誤!
+          .col-md(v-if="Fn_point()==='pointSame'")
+            h3.sapn.span_2.font_price 牌位分數相同!
+          .col-md(v-if="Fn_point()==='leagueORareaFail'")
+            h3.sapn.span_2.font_price 區域選擇有誤!
+          .col-md(v-else-if="Fn_point()==='success'")
+            h3.sapn.span_2.font_price 價格為:{{TotalPrice()}}元
+        
     
 
 

@@ -23,12 +23,34 @@ video{
     text-align: center;
     font-weight: bold;
   }
+  /* 字型類css */
 .font{
     color: white;
     font-family: 'Orbitron';
     font-weight:1000;
   }
-
+.font_title{
+    color: white;
+    font-family: 'Orbitron';
+    font-weight:1000;
+    font-size: 5.5em;
+    text-align: center;
+}
+.font_arrow{
+    color: white;
+    font-family: 'Orbitron';
+    font-weight:1000;
+    font-size: 5.5em;
+    top: 30px;
+    right: 15px;
+  }
+.font_price{
+    color: white;
+    font-family: 'Orbitron';
+    font-weight:1000;
+    margin-top: 80px;
+    font-size: 2.5em;
+  }
 .loginalert{
     width:70%;
     /* margin:0px auto;    */
@@ -38,8 +60,8 @@ video{
     height: 100vh;
 }
 .custom-select{
-    width:120px;
-    margin:10px;
+    width:110px;
+    margin:7px;
 }
 .OG_input{
     font-family: 'Orbitron';
@@ -49,7 +71,7 @@ video{
 }
 
 .containe-fluid{
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-image: linear-gradient(to top, #FEDFE1 0%, #CC543A 100%);
 }
 
 body{
