@@ -72,8 +72,8 @@ video{
 
 .containe-fluid{
     background-image: linear-gradient(to top, #FEDFE1 0%, #CC543A 100%);
-    /* background-image: url("/image/BK.jpg"); */
-    background-size:auto;
+     /* background-image: url("/image/BK.jpg"); 
+    background-size:auto; */
 }
 .logo{
     margin-top: 175px;
