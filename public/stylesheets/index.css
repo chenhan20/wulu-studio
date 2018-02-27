@@ -48,7 +48,7 @@ video{
     color: white;
     font-family: 'Orbitron';
     font-weight:1000;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     font-size: 2.5em;
   }
 .loginalert{
@@ -71,7 +71,7 @@ video{
 }
 
 .containe-fluid{
-    background-image: linear-gradient(to top, #FEDFE1 0%, #CC543A 100%);
+    /* background-image: linear-gradient(to top, #FEDFE1 0%, #CC543A 100%); */
      /* background-image: url("/image/BK.jpg"); 
     background-size:auto; */
 }
@@ -83,4 +83,6 @@ video{
 } 
 body{
     overflow-x: hidden;
+    background-image: linear-gradient(to top, #FEDFE1 0%, #CC543A 100%);
+
 }
