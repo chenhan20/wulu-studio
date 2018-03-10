@@ -1,7 +1,10 @@
 .video_container{
-    position: relative;    
+    position: relative;   
 }
+.container-fluid{
+    padding :0px; 
 
+}
 video{
     height: auto;
     vertical-align: middle;
@@ -15,11 +18,19 @@ video{
     align-items: center;
     justify-content: center;
 }
+.overlay-button{
+    background: rgba(0,0,0,0);
+    position: absolute;
+    top: 30%; right: 0; bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .mediafont {
     margin:20%;
     color: white;
     font-family: 'Nobile', sans-serif;
-    font-size: 3vw;
+    font-size: 4vw;
     text-align: center;
     font-weight: bold;
   }
@@ -83,6 +94,30 @@ video{
 } 
 body{
     overflow-x: hidden;
-    background-image: linear-gradient(to top, #FEDFE1 0%, #CC543A 100%);
+    background-image: linear-gradient(to top, #FEDFE1 0%, #333 100%);
+}
+
+
+.image_text{
+    text-align: center;
+}
+.g2d-hero-action-btn {
+    color: #fff;
+    border: 2px solid #fff;
+    line-height: 40px;
+    border-radius: 30px;
+    display: inline-block;
+    font-family: "graphik-bki", "PingFangTC-Semibold", "Noto Sans Bold";
+    font-size: 14px;
+    letter-spacing: 2px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    padding: 0 27px;
+    cursor: pointer;
 
 }
+.g2d-hero-action-btn:hover{
+    background: #fff;
+    color:black;
+}
+

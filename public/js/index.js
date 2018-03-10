@@ -95,7 +95,6 @@ var price = new Vue({
 
       var og_league_area=''.concat(original_league_Num,original_area_num);
       var tg_league_area=''.concat(target_league_Num,target_area_num);
-      debugger;
       // alert(og_league_area);
       if(og_league_area>tg_league_area){
         //牌位不符合直接排除掉 
@@ -181,3 +180,4 @@ switch(true) {
     break;
   }
 }
+
